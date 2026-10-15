@@ -1,4 +1,4 @@
-﻿@echo off
+@echo off
 SETLOCAL EnableDelayedExpansion
 
 echo ==============================================
@@ -76,7 +76,9 @@ IF NOT EXIST "chroma_db\" (
 
 :StartApp
 echo [INFO] Starting the Flask Application Server...
+echo [INFO] Opening http://127.0.0.1:5000 in your browser...
 echo.
+start "" http://127.0.0.1:5000
 python app.py
 
 pause
